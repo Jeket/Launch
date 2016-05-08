@@ -35,7 +35,7 @@ This project depends on node.js. To install run:
 
 ### Up and running:
 
-Once all the pendencies are met, the app is ready to be built by our gulpfile.js. To execute the gulp tasks, run the folloing command:
+Once all the dependencies are met, the app is ready to be built by our gulpfile.js. To execute the gulp tasks, run the folloing command:
 
 ```
 $ gulp
