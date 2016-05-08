@@ -1,14 +1,14 @@
 # Launch-Pad
-*The ulitmate boilerplate for front-end behavior driven development*
+*The ulitmate boilerplate for front-end TDD*
 
 This project depends on node.js. To install run:
 ```shell
-$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-$ brew install node
-$ sudo npm install npm -g
+1. $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+2. $ brew install node
+3. $ sudo npm install npm -g
 ```
 
-## What you get out of the box:
+#### What you get out of the box:
 
 ```
 - Angular
@@ -24,7 +24,7 @@ $ sudo npm install npm -g
 ### Up and Running: 
 
 ```
-1. Fork/Clone/Download this repo to you workspace
+1. $ git clone git@github.com:alexUXUI/Launch-Pad.git
 2. $ cd Launch-Pad
 3. $ npm i -S
 ```
@@ -42,9 +42,12 @@ This will run the gulpfile.js, which will execute the following tasks:
 2. Uglify Javascript
 3. Compile SASS
 4. Automatically update changes in browser
-5. Automatically run tests + save reports
-6. Pipe all code to distribution folder
+5. Pipe all code to distribution folder
 ```
+
+### Testing: 
+
+This framework was built for E2E testing with a focus on UI. 
 
 ##### Running Tests:
 
@@ -52,6 +55,33 @@ To run just the tests, run the following command:
 ```
 $ gulp test
 ```
+
+##### Customizing tests:
+
+The test suite relies on Nightwatch.js to communicate with Selenium. So in order to fully customize, you will need to become familiar with the UI testing endpoints available thhrough the nightwatch.js API. In the meantime, here are some useful sample methods to get you started with Nightwatch.
+
+```js
+'@tags': ['desktop'],
+'Desktop testing': function(browser){
+	browser
+		.url('http://localhost:3000')
+		.resizeWindow(1000, 800)
+		.assert.cssProperty('body', 'background-color', 'rgba(100, 149, 237, 1)')
+		.waitForElementVisible('body', 3000, 'page loaded')
+		.waitForElementPresent('.greeting', 3000)
+	  .saveScreenshot('./selenium-suite/reports/devices/desktop.png')
+},
+```
+
+```js
+The .resizeWindow() method takes a height and a width px value.
+The .cssPorperty() method takes an element, using css selector syntax, as well as a porperty and a value.
+The	.saveScreenshot() method takes a path to save the image.
+```
+
+##### Writing tests:
+
+The testing suite is made up of three tests. Each test resizes the browser window and checks for UI conditions. After the tests have run, selenium and nightwatch.js write a test reprt to the **reports** folder. A screen shot of each browser (device) size are written into the **devices** folder, located within reports. To change the configuration of the tests you can edit the: nightwatch.json, gulfile.js, or package.json files.
 
 ###### Links to documentation(s):
 
