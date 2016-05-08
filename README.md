@@ -1,4 +1,4 @@
-# Launch-Pad
+# Launch
 *The ulitmate boilerplate for front-end TDD*
 
 This project depends on node.js. To install run:
@@ -11,7 +11,7 @@ This project depends on node.js. To install run:
 ###### What you get out of the box:
 
 ```
-- Angular
+- Angular -v 1.49
   - UI Router
 - Selenium 
   - Nightwatch.js
@@ -19,6 +19,10 @@ This project depends on node.js. To install run:
   - SASS 
   - Babel 
   - BrowserSync
+- Green Sock Animation Platform
+  - TweenMax
+  - TweenLite
+  - All GSAP pulgins
 ```
 
 ### Installation: 
@@ -68,7 +72,7 @@ gulp.task('js', () => {
 })
 ```
 
-Add the task to thw watch function:
+Add the task to the watch function:
 
 ```js
 gulp.task('watch', ['html', "sass",'js', "sync"], () => {
@@ -91,7 +95,7 @@ $ gulp test
 
 ##### Customizing tests:
 
-The test suite relies on Nightwatch.js to communicate with Selenium. So in order to fully customize, you will need to become familiar with the UI testing endpoints available thhrough the nightwatch.js API. In the meantime, here are some useful sample methods to get you started with Nightwatch.
+The test suite relies on Nightwatch.js to communicate with Selenium. Although selenium .js statements are valid within nightwatch, in order to fully customize the UI testing portion, you will need to become familiar with the UI testing endpoints available thhrough the nightwatch.js API. In the meantime, here are some useful sample methods to get you started with Nightwatch.
 
 ```js
 '@tags': ['desktop'],
@@ -102,19 +106,23 @@ The test suite relies on Nightwatch.js to communicate with Selenium. So in order
 		.assert.cssProperty('body', 'background-color', 'rgba(100, 149, 237, 1)')
 		.waitForElementVisible('body', 3000, 'page loaded')
 		.waitForElementPresent('.greeting', 3000)
-	  .saveScreenshot('./selenium-suite/reports/devices/desktop.png')
+	  	.saveScreenshot('./selenium-suite/reports/devices/desktop.png')
 },
 ```
 
 ```js
 The .resizeWindow() method takes a height and a width px value.
 The .cssPorperty() method takes an element, using css selector syntax, as well as a porperty and a value.
-The	.saveScreenshot() method takes a path to save the image.
+The .saveScreenshot() method takes a path to save the image.
 ```
 
 ##### Writing tests:
 
 The testing suite is made up of three tests. Each test resizes the browser window and checks for UI conditions. After the tests have run, selenium and nightwatch.js write a test reprt to the **reports** folder. A screen shot of each browser (device) size are written into the **devices** folder, located within reports. To change the configuration of the tests you can edit the: nightwatch.json, gulfile.js, or package.json files.
+
+### Client Side MVC:
+
+Angular is being used as the client side MVC architecture. This angular app relies on UI router for routing. To become familiar with angular UI please see: [Angular UI](https://angular-ui.github.io/ui-router/)
 
 ###### Links to documentation(s):
 
