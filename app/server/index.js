@@ -9,7 +9,7 @@ const path = require('path')
 const app = express()
 
 // middleware
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')))
 
 // routes
 app.get('/', (req, res, next) => {

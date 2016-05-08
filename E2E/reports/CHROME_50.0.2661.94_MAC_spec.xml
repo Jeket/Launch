@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="3">
+
+  <testsuite name="spec"
+    errors="0" failures="0" hostname="" id="" package="spec" skipped="0"
+    tests="3" time="3.537" timestamp="Sun, 08 May 2016 18:59:30 GMT">
+  
+    <testcase name="Desktop testing" time="2.177" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Tablet testing" time="0.4540" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Mobile Testing" time="0.9060" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+  
+  </testsuite>
+</testsuites>

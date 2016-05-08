@@ -1,56 +1,60 @@
-23:27:11.361 INFO - Launching a standalone Selenium Server
+12:59:30.105 INFO - Launching a standalone Selenium Server
 Setting system property webdriver.chrome.driver to ./node_modules/.bin/chromedriver
-23:27:11.391 INFO - Java: Oracle Corporation 25.45-b02
-23:27:11.391 INFO - OS: Mac OS X 10.10.3 x86_64
-23:27:11.398 INFO - v2.47.1, with Core v2.47.1. Built from revision 411b314
-23:27:11.449 INFO - Driver provider org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
+12:59:30.150 INFO - Java: Oracle Corporation 25.45-b02
+12:59:30.150 INFO - OS: Mac OS X 10.10.3 x86_64
+12:59:30.163 INFO - v2.47.1, with Core v2.47.1. Built from revision 411b314
+12:59:30.222 INFO - Driver provider org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
 registration capabilities Capabilities [{ensureCleanSession=true, browserName=internet explorer, version=, platform=WINDOWS}] does not match the current platform MAC
-23:27:11.449 INFO - Driver provider org.openqa.selenium.edge.EdgeDriver registration is skipped:
+12:59:30.222 INFO - Driver provider org.openqa.selenium.edge.EdgeDriver registration is skipped:
 registration capabilities Capabilities [{browserName=MicrosoftEdge, version=, platform=WINDOWS}] does not match the current platform MAC
-23:27:11.450 INFO - Driver class not found: com.opera.core.systems.OperaDriver
-23:27:11.450 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
-23:27:11.510 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
-23:27:11.510 INFO - Selenium Server is up and running
-23:27:11.735 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Spec, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
-23:27:11.743 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Spec, browserName=chrome, javascriptEnabled=true, platform=ANY}]
-Starting ChromeDriver 2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4) on port 20316
+12:59:30.222 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+12:59:30.223 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+12:59:30.322 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
+12:59:30.322 INFO - Selenium Server is up and running
+12:59:30.541 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Spec, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+12:59:30.553 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Spec, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4) on port 37544
 Only local connections are allowed.
-23:27:13.030 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Spec, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
-23:27:13.043 INFO - Executing: [get: http://localhost:3000])
-23:27:13.379 INFO - Done: [get: http://localhost:3000]
-23:27:13.385 INFO - Executing: [set window size])
-23:27:13.564 INFO - Done: [set window size]
-23:27:13.570 INFO - Executing: [find element: By.cssSelector: body])
-23:27:13.594 INFO - Done: [find element: By.cssSelector: body]
-23:27:13.597 INFO - Executing: [get value of css property: 0 [[ChromeDriver: chrome on MAC (6de622f0f449efdf4220812ad32d8efd)] -> css selector: body], background-color])
-23:27:13.606 INFO - Done: [get value of css property: 0 [[ChromeDriver: chrome on MAC (6de622f0f449efdf4220812ad32d8efd)] -> css selector: body], background-color]
-23:27:13.613 INFO - Executing: [find elements: By.cssSelector: body])
-23:27:13.633 INFO - Done: [find elements: By.cssSelector: body]
-23:27:13.636 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on MAC (6de622f0f449efdf4220812ad32d8efd)] -> css selector: body]])
-23:27:13.648 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on MAC (6de622f0f449efdf4220812ad32d8efd)] -> css selector: body]]
-23:27:13.651 INFO - Executing: [find elements: By.cssSelector: .greeting])
-23:27:13.666 INFO - Done: [find elements: By.cssSelector: .greeting]
-23:27:13.670 INFO - Executing: [set window size])
-23:27:13.816 INFO - Done: [set window size]
-23:27:13.821 INFO - Executing: [find element: By.cssSelector: body])
-23:27:13.838 INFO - Done: [find element: By.cssSelector: body]
-23:27:13.840 INFO - Executing: [get value of css property: 0 [[ChromeDriver: chrome on MAC (6de622f0f449efdf4220812ad32d8efd)] -> css selector: body], background-color])
-23:27:13.848 INFO - Done: [get value of css property: 0 [[ChromeDriver: chrome on MAC (6de622f0f449efdf4220812ad32d8efd)] -> css selector: body], background-color]
-23:27:13.851 INFO - Executing: [find element: By.cssSelector: .greeting])
-23:27:13.867 INFO - Done: [find element: By.cssSelector: .greeting]
-23:27:13.870 INFO - Executing: [get text: 1 [[ChromeDriver: chrome on MAC (6de622f0f449efdf4220812ad32d8efd)] -> css selector: .greeting]])
-23:27:13.888 INFO - Done: [get text: 1 [[ChromeDriver: chrome on MAC (6de622f0f449efdf4220812ad32d8efd)] -> css selector: .greeting]]
-23:27:13.895 INFO - Executing: [get: http://localhost:3000])
-23:27:13.954 INFO - Done: [get: http://localhost:3000]
-23:27:13.957 INFO - Executing: [find elements: By.cssSelector: body])
-23:27:13.978 INFO - Done: [find elements: By.cssSelector: body]
-23:27:13.980 INFO - Executing: [is displayed: 2 [[ChromeDriver: chrome on MAC (6de622f0f449efdf4220812ad32d8efd)] -> css selector: body]])
-23:27:13.991 INFO - Done: [is displayed: 2 [[ChromeDriver: chrome on MAC (6de622f0f449efdf4220812ad32d8efd)] -> css selector: body]]
-23:27:13.995 INFO - Executing: [find elements: By.cssSelector: .greeting])
-23:27:14.009 INFO - Done: [find elements: By.cssSelector: .greeting]
-23:27:14.012 INFO - Executing: [set window size])
-23:27:14.147 INFO - Done: [set window size]
-23:27:14.150 INFO - Executing: [close window])
-23:27:14.261 INFO - Done: [close window]
-23:27:14.266 INFO - Executing: [delete session: a8da0214-6816-49e9-aa51-44c5da5e14e9])
-23:27:14.776 INFO - Done: [delete session: a8da0214-6816-49e9-aa51-44c5da5e14e9]
+12:59:31.927 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Spec, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+12:59:31.941 INFO - Executing: [get: http://localhost:3000])
+12:59:32.288 INFO - Done: [get: http://localhost:3000]
+12:59:32.295 INFO - Executing: [set window size])
+12:59:32.475 INFO - Done: [set window size]
+12:59:32.481 INFO - Executing: [find element: By.cssSelector: body])
+12:59:32.505 INFO - Done: [find element: By.cssSelector: body]
+12:59:32.509 INFO - Executing: [get value of css property: 0 [[ChromeDriver: chrome on MAC (918487f0031115ee7ed19f441ae3b5fd)] -> css selector: body], background-color])
+12:59:32.517 INFO - Done: [get value of css property: 0 [[ChromeDriver: chrome on MAC (918487f0031115ee7ed19f441ae3b5fd)] -> css selector: body], background-color]
+12:59:32.524 INFO - Executing: [find elements: By.cssSelector: body])
+12:59:32.541 INFO - Done: [find elements: By.cssSelector: body]
+12:59:32.543 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on MAC (918487f0031115ee7ed19f441ae3b5fd)] -> css selector: body]])
+12:59:32.554 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on MAC (918487f0031115ee7ed19f441ae3b5fd)] -> css selector: body]]
+12:59:32.558 INFO - Executing: [find elements: By.cssSelector: .greeting])
+12:59:32.572 INFO - Done: [find elements: By.cssSelector: .greeting]
+12:59:32.579 INFO - Executing: [set window size])
+12:59:32.723 INFO - Done: [set window size]
+12:59:32.727 INFO - Executing: [find element: By.cssSelector: body])
+12:59:32.744 INFO - Done: [find element: By.cssSelector: body]
+12:59:32.746 INFO - Executing: [get value of css property: 0 [[ChromeDriver: chrome on MAC (918487f0031115ee7ed19f441ae3b5fd)] -> css selector: body], background-color])
+12:59:32.754 INFO - Done: [get value of css property: 0 [[ChromeDriver: chrome on MAC (918487f0031115ee7ed19f441ae3b5fd)] -> css selector: body], background-color]
+12:59:32.757 INFO - Executing: [find element: By.cssSelector: .greeting])
+12:59:32.771 INFO - Done: [find element: By.cssSelector: .greeting]
+12:59:32.774 INFO - Executing: [get text: 1 [[ChromeDriver: chrome on MAC (918487f0031115ee7ed19f441ae3b5fd)] -> css selector: .greeting]])
+12:59:32.791 INFO - Done: [get text: 1 [[ChromeDriver: chrome on MAC (918487f0031115ee7ed19f441ae3b5fd)] -> css selector: .greeting]]
+12:59:32.794 INFO - Executing: [take screenshot])
+12:59:33.023 INFO - Done: [take screenshot]
+12:59:33.033 INFO - Executing: [get: http://localhost:3000])
+12:59:33.104 INFO - Done: [get: http://localhost:3000]
+12:59:33.107 INFO - Executing: [find elements: By.cssSelector: body])
+12:59:33.122 INFO - Done: [find elements: By.cssSelector: body]
+12:59:33.125 INFO - Executing: [is displayed: 2 [[ChromeDriver: chrome on MAC (918487f0031115ee7ed19f441ae3b5fd)] -> css selector: body]])
+12:59:33.135 INFO - Done: [is displayed: 2 [[ChromeDriver: chrome on MAC (918487f0031115ee7ed19f441ae3b5fd)] -> css selector: body]]
+12:59:33.138 INFO - Executing: [find elements: By.cssSelector: .greeting])
+12:59:33.152 INFO - Done: [find elements: By.cssSelector: .greeting]
+12:59:33.155 INFO - Executing: [set window size])
+12:59:33.183 INFO - Done: [set window size]
+12:59:33.185 INFO - Executing: [take screenshot])
+12:59:33.303 INFO - Done: [take screenshot]
+12:59:33.308 INFO - Executing: [close window])
+12:59:33.419 INFO - Done: [close window]
+12:59:33.423 INFO - Executing: [delete session: 84b40a34-61bd-44bb-a232-481a1926b7e5])
+12:59:33.933 INFO - Done: [delete session: 84b40a34-61bd-44bb-a232-481a1926b7e5]

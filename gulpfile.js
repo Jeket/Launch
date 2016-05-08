@@ -55,6 +55,15 @@ gulp.task('sass', () => {
   }))
 })
 
+gulp.task('js', () => {
+  return gulp.src('/app/client/js/*.js')
+  .pipe(uglify())
+  .pipe(gulp.dest('dist/js'))
+  .pipe(browserSync.reload({
+    stream: true
+  }))
+})
+
 gulp.task('imagemin', () => {
   return gulp.src('app/client/images/**/*.+(png|jpg|gif|svg)')
   .pipe(cache(imagemin({
@@ -63,7 +72,7 @@ gulp.task('imagemin', () => {
   .pipe(gulp.dist('dist/images'))
 })
 
-gulp.task('watch', ['html', "sass", "sync"], () => {
+gulp.task('watch', ['html', "sass",'js', "sync"], () => {
   gulp.watch('app/client/scss/*.scss', ["sass"])
   gulp.watch('app/client/index.html', ["html"])
 })
@@ -74,7 +83,7 @@ gulp.task('fonts', () => {
 })
 
 gulp.task('clean:dist', () => { return del.sync('dist') })
-gulp.task('clean:devices', () => { return del.sync('selenium-suite/reports/devices') })
+// gulp.task('clean:devices', () => { return del.sync('selenium-suite/reports/devices') })
 gulp.task('cache:clear', () => { return cache.clearAll() })
 
 gulp.task('default', () => {

@@ -15,7 +15,7 @@ module.exports = {
 		browser
 			.resizeWindow(700, 800)
 			.assert.cssProperty("body", "background-color", "rgba(144, 238, 144, 1)")
-			.assert.containsText('.greeting', 'The best')
+			.assert.containsText('.greeting', 'Awesome Sauce')
 			.saveScreenshot('./selenium-suite/reports/devices/desktop.png')
 	},
 	'@tags': ['mobile'],

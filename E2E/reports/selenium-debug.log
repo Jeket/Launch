@@ -1,0 +1,28 @@
+12:21:36.501 INFO - Launching a standalone Selenium Server
+Setting system property webdriver.chrome.driver to ./node_modules/.bin/chromedriver
+12:21:36.567 INFO - Java: Oracle Corporation 25.45-b02
+12:21:36.567 INFO - OS: Mac OS X 10.10.3 x86_64
+12:21:36.584 INFO - v2.47.1, with Core v2.47.1. Built from revision 411b314
+12:21:36.674 INFO - Driver provider org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
+registration capabilities Capabilities [{ensureCleanSession=true, browserName=internet explorer, version=, platform=WINDOWS}] does not match the current platform MAC
+12:21:36.674 INFO - Driver provider org.openqa.selenium.edge.EdgeDriver registration is skipped:
+registration capabilities Capabilities [{browserName=MicrosoftEdge, version=, platform=WINDOWS}] does not match the current platform MAC
+12:21:36.674 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+12:21:36.675 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+12:21:36.792 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
+12:21:36.793 INFO - Selenium Server is up and running
+12:21:37.155 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Spec, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+12:21:37.169 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Spec, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4) on port 35319
+Only local connections are allowed.
+12:21:38.655 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Spec, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+12:21:38.667 INFO - Executing: [get: http://localhost:3000])
+12:21:39.078 INFO - Done: [get: http://localhost:3000]
+12:21:39.084 INFO - Executing: [set window size])
+12:21:39.285 INFO - Done: [set window size]
+12:21:39.292 INFO - Executing: [find element: By.cssSelector: body])
+12:21:39.317 INFO - Done: [find element: By.cssSelector: body]
+12:21:39.320 INFO - Executing: [get value of css property: 0 [[ChromeDriver: chrome on MAC (bd41485586a7a9cffa25c49c66e69956)] -> css selector: body], background-color])
+12:21:39.329 INFO - Done: [get value of css property: 0 [[ChromeDriver: chrome on MAC (bd41485586a7a9cffa25c49c66e69956)] -> css selector: body], background-color]
+12:21:39.334 INFO - Executing: [delete session: 2be51040-f4b8-448a-ac05-8c4b4d8ba888])
+12:21:39.899 INFO - Done: [delete session: 2be51040-f4b8-448a-ac05-8c4b4d8ba888]
