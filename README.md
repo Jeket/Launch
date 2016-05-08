@@ -133,6 +133,16 @@ For further reading on the technologies involved int this project, please refer 
 - [Gulp](http://gulpjs.com/)
 - [Angular](https://angularjs.org/)
 
+### Contribute
+
+All PR's are welcome.
+
+##### To Do:
+
+- Add Webpack Components!
+- Add Unit testing
+- Add linters
+
 > Author: Alex Bennett
 
 > License MIT
