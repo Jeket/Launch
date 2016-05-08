@@ -22,10 +22,17 @@ gulp.task('useref', () => {
     .pipe(gulp.dest('dist'))
     .pipe(nightwatch({
       configFile: './nightwatch.json'
-    }));
+    }))
 })
 
-gulp.task('browserSync', () => {
+gulp.task('test', () => {
+  return gulp.src('app/*/*/*')
+  .pipe(nightwatch({
+    configFile: './nightwatch.json'
+  }))
+})
+
+gulp.task('sync', () => {
   browserSync.init({
     server: {
       baseDir: 'app/client'
@@ -36,7 +43,7 @@ gulp.task('browserSync', () => {
 gulp.task('sass', () => {
   return gulp.src('app/client/scss/**/*.scss')
   .pipe(sass())
-  .pipe(gulp.dest('app/css'))
+  .pipe(gulp.dest('dist/css'))
   .pipe(browserSync.reload({
     stream: true
   }))
@@ -50,16 +57,9 @@ gulp.task('imagemin', () => {
   .pipe(gulp.dist('dist/images'))
 })
 
-gulp.task('watch', ["browserSync", "sass"], () => {
+gulp.task('watch', ["sync", "sass"], () => {
   gulp.watch('app/scss/**/*.scss', ["sass"], () => {
   })
-})
-
-gulp.task('test', () => {
-  return gulp.src('app/*/*/*')
-  .pipe(nightwatch({
-    configFile: './nightwatch.json'
-  }));
 })
 
 gulp.task('fonts', () => {
@@ -67,17 +67,12 @@ gulp.task('fonts', () => {
   .pipe(gulp.dest('dist/fonts'))
 })
 
-gulp.task('clean:dist', () => {
-  return del.sync('dist')
-})
-
-gulp.task('cache:clear', () => {
-  return cache.clearAll()
-})
+gulp.task('clean:dist', () => { return del.sync('dist') })
+gulp.task('cache:clear', () => { return cache.clearAll() })
 
 gulp.task('default', () => {
   runSequence('clean:dist',
-  ['useref', 'sass', 'browserSync', 'watch'], () => {
-    console.log('finishing tasks');
+  ['useref', 'sass', 'watch'], () => {
+    console.log('finishing tasks')
   })
 })
