@@ -1,30 +1,30 @@
-18:13:53.203 INFO - Launching a standalone Selenium Server
+19:01:54.113 INFO - Launching a standalone Selenium Server
 Setting system property webdriver.chrome.driver to ./node_modules/.bin/chromedriver
-18:13:53.250 INFO - Java: Oracle Corporation 25.45-b02
-18:13:53.251 INFO - OS: Mac OS X 10.10.3 x86_64
-18:13:53.261 INFO - v2.47.1, with Core v2.47.1. Built from revision 411b314
-18:13:53.341 INFO - Driver provider org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
+19:01:54.142 INFO - Java: Oracle Corporation 25.45-b02
+19:01:54.143 INFO - OS: Mac OS X 10.10.3 x86_64
+19:01:54.150 INFO - v2.47.1, with Core v2.47.1. Built from revision 411b314
+19:01:54.202 INFO - Driver provider org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
 registration capabilities Capabilities [{ensureCleanSession=true, browserName=internet explorer, version=, platform=WINDOWS}] does not match the current platform MAC
-18:13:53.341 INFO - Driver provider org.openqa.selenium.edge.EdgeDriver registration is skipped:
+19:01:54.202 INFO - Driver provider org.openqa.selenium.edge.EdgeDriver registration is skipped:
 registration capabilities Capabilities [{browserName=MicrosoftEdge, version=, platform=WINDOWS}] does not match the current platform MAC
-18:13:53.342 INFO - Driver class not found: com.opera.core.systems.OperaDriver
-18:13:53.342 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
-18:13:53.437 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
-18:13:53.437 INFO - Selenium Server is up and running
-18:13:53.728 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Spec, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
-18:13:53.738 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Spec, browserName=chrome, javascriptEnabled=true, platform=ANY}]
-Starting ChromeDriver 2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4) on port 19344
+19:01:54.203 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+19:01:54.203 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+19:01:54.261 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
+19:01:54.261 INFO - Selenium Server is up and running
+19:01:54.473 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Spec, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+19:01:54.481 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Spec, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4) on port 18105
 Only local connections are allowed.
-18:13:55.118 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Spec, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
-18:13:55.130 INFO - Executing: [get: http://localhost:3000])
-18:13:55.469 INFO - Done: [get: http://localhost:3000]
-18:13:55.476 INFO - Executing: [find elements: By.cssSelector: body])
-18:13:55.517 INFO - Done: [find elements: By.cssSelector: body]
-18:13:55.520 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on MAC (22016e6dfd27c2d8ff390cf700b2d1d5)] -> css selector: body]])
-18:13:55.533 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on MAC (22016e6dfd27c2d8ff390cf700b2d1d5)] -> css selector: body]]
-18:13:55.538 INFO - Executing: [find elements: By.cssSelector: .greeting])
-18:13:55.553 INFO - Done: [find elements: By.cssSelector: .greeting]
-18:13:55.556 INFO - Executing: [close window])
-18:13:55.666 INFO - Done: [close window]
-18:13:55.670 INFO - Executing: [delete session: c18df1b7-96d1-4a2b-9128-7719a63ca48d])
-18:13:56.181 INFO - Done: [delete session: c18df1b7-96d1-4a2b-9128-7719a63ca48d]
+19:01:55.751 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Spec, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+19:01:55.763 INFO - Executing: [get: http://localhost:3000])
+19:01:56.115 INFO - Done: [get: http://localhost:3000]
+19:01:56.121 INFO - Executing: [find elements: By.cssSelector: body])
+19:01:56.153 INFO - Done: [find elements: By.cssSelector: body]
+19:01:56.156 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on MAC (4c94f132ecf991d8d763b0b485994a2b)] -> css selector: body]])
+19:01:56.168 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on MAC (4c94f132ecf991d8d763b0b485994a2b)] -> css selector: body]]
+19:01:56.173 INFO - Executing: [find elements: By.cssSelector: .greeting])
+19:01:56.187 INFO - Done: [find elements: By.cssSelector: .greeting]
+19:01:56.190 INFO - Executing: [close window])
+19:01:56.303 INFO - Done: [close window]
+19:01:56.307 INFO - Executing: [delete session: e1de98ca-362e-492c-be18-61dbe6e0f313])
+19:01:56.817 INFO - Done: [delete session: e1de98ca-362e-492c-be18-61dbe6e0f313]

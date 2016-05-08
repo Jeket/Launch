@@ -55,6 +55,13 @@ gulp.task('watch', ["browserSync", "sass"], () => {
   })
 })
 
+gulp.task('test', () => {
+  return gulp.src('app/*/*/*')
+  .pipe(nightwatch({
+    configFile: './nightwatch.json'
+  }));
+})
+
 gulp.task('fonts', () => {
   return gulp.src('app/fonts/**/*')
   .pipe(gulp.dest('dist/fonts'))
