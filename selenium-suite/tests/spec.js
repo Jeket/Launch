@@ -9,10 +9,14 @@ module.exports = {
 			.assert.cssProperty('body', 'background-color', 'rgba(100, 149, 237, 1)')
 			.waitForElementVisible('body', 3000, 'page loaded')
 			.waitForElementPresent('.greeting', 3000)
+	},
+	'@tags': ['tablet'],
+	'Tablet testing': function(browser){
+		browser
 			.resizeWindow(700, 800)
 			.assert.cssProperty("body", "background-color", "rgba(144, 238, 144, 1)")
 			.assert.containsText('.greeting', 'The best')
-			// .saveScreenshot('./selenium-suite/reports/devices/desktop.png')
+			.saveScreenshot('./selenium-suite/reports/devices/desktop.png')
 	},
 	'@tags': ['mobile'],
 	'Mobile Testing': function(browser) {
@@ -21,7 +25,7 @@ module.exports = {
 			.waitForElementVisible('body', 3000, 'page loaded')
 			.waitForElementPresent('.greeting', 3000)
 			.resizeWindow(300, 800)
-			// .saveScreenshot('./selenium-suite/reports/devices/tablet.png')
+			.saveScreenshot('./selenium-suite/reports/devices/tablet.png')
 			.closeWindow()
 			.end();
 	}
