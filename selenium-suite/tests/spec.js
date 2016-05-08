@@ -5,11 +5,14 @@ module.exports = {
 	'Desktop testing': function(browser){
 		browser
 			.url('http://localhost:3000')
+			.resizeWindow(1000, 800)
+			.assert.cssProperty('body', 'background-color', 'rgba(100, 149, 237, 1)')
 			.waitForElementVisible('body', 3000, 'page loaded')
 			.waitForElementPresent('.greeting', 3000)
+			.resizeWindow(700, 800)
+			.assert.cssProperty("body", "background-color", "rgba(144, 238, 144, 1)")
 			.assert.containsText('.greeting', 'The best')
-			.resizeWindow(1000, 800)
-			.elementIdSize(ID);
+			// .saveScreenshot('./selenium-suite/reports/devices/desktop.png')
 	},
 	'@tags': ['mobile'],
 	'Mobile Testing': function(browser) {
@@ -18,7 +21,7 @@ module.exports = {
 			.waitForElementVisible('body', 3000, 'page loaded')
 			.waitForElementPresent('.greeting', 3000)
 			.resizeWindow(300, 800)
-			.saveScreenshot('test.png')
+			// .saveScreenshot('./selenium-suite/reports/devices/tablet.png')
 			.closeWindow()
 			.end();
 	}

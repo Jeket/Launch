@@ -1,1 +1,0 @@
-angular.module("mq-dev",["ui.router"]).config(function(t,e){e.otherwise("/state1"),t.state("state1",{url:"/",templateUrl:"views/index.html"}).state("state2",{url:"/solutions",templateUrl:"views/solutions.html"})});

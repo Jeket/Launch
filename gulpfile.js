@@ -1,32 +1,37 @@
 'use strict'
 
-const gulp = require("gulp")
-const sass = require('gulp-sass')
-const browserSync = require('browser-sync').create()
-const useref = require('gulp-useref')
-const uglify = require('gulp-uglify')
-const gulpIf = require('gulp-if')
-const cssnano = require('gulp-cssnano')
-const imagemin = require('gulp-imagemin')
-const cache = require('gulp-cache')
-const del = require('del')
-const runSequence = require('run-sequence')
-const babel = require('gulp-babel');
-const nightwatch = require('gulp-nightwatch');
+const gulp = require("gulp"),
+      sass = require('gulp-sass'),
+      browserSync = require('browser-sync').create(),
+      useref = require('gulp-useref'),
+      uglify = require('gulp-uglify'),
+      gulpIf = require('gulp-if'),
+      cssnano = require('gulp-cssnano'),
+      imagemin = require('gulp-imagemin'),
+      cache = require('gulp-cache'),
+      del = require('del'),
+      runSequence = require('run-sequence'),
+      babel = require('gulp-babel'),
+      nightwatch = require('gulp-nightwatch')
 
 gulp.task('useref', () => {
-  return gulp.src('app/*/*/*')
+  return gulp.src('app/client/*/*')
     .pipe(useref())
     .pipe(gulpIf('*.js', uglify()))
     .pipe(gulpIf('*.css', cssnano()))
     .pipe(gulp.dest('dist'))
-    .pipe(nightwatch({
-      configFile: './nightwatch.json'
+})
+
+gulp.task('html', () => {
+  return gulp.src('app/client/index.html')
+    .pipe(gulp.dest('dist'))
+    .pipe(browserSync.reload({
+      stream: true
     }))
 })
 
 gulp.task('test', () => {
-  return gulp.src('app/*/*/*')
+  return gulp.src('app/client/*/*')
   .pipe(nightwatch({
     configFile: './nightwatch.json'
   }))
@@ -35,7 +40,7 @@ gulp.task('test', () => {
 gulp.task('sync', () => {
   browserSync.init({
     server: {
-      baseDir: 'app/client'
+      baseDir: 'dist'
     }
   })
 })
@@ -43,6 +48,7 @@ gulp.task('sync', () => {
 gulp.task('sass', () => {
   return gulp.src('app/client/scss/**/*.scss')
   .pipe(sass())
+  .pipe(cssnano())
   .pipe(gulp.dest('dist/css'))
   .pipe(browserSync.reload({
     stream: true
@@ -57,22 +63,23 @@ gulp.task('imagemin', () => {
   .pipe(gulp.dist('dist/images'))
 })
 
-gulp.task('watch', ["sync", "sass"], () => {
-  gulp.watch('app/scss/**/*.scss', ["sass"], () => {
-  })
+gulp.task('watch', ['html', "sass", "sync"], () => {
+  gulp.watch('app/client/scss/*.scss', ["sass"])
+  gulp.watch('app/client/index.html', ["html"])
 })
 
 gulp.task('fonts', () => {
   return gulp.src('app/fonts/**/*')
-  .pipe(gulp.dest('dist/fonts'))
+  .pipe(gulp.dest('dist/client/fonts'))
 })
 
 gulp.task('clean:dist', () => { return del.sync('dist') })
+gulp.task('clean:devices', () => { return del.sync('selenium-suite/reports/devices') })
 gulp.task('cache:clear', () => { return cache.clearAll() })
 
 gulp.task('default', () => {
-  runSequence('clean:dist',
-  ['useref', 'sass', 'watch'], () => {
+  runSequence('clean:dist', 'clean:devices',
+  ['sass','html', 'useref', 'watch'], () => {
     console.log('finishing tasks')
   })
 })
