@@ -87,7 +87,7 @@ gulp.task('clean:dist', () => { return del.sync('dist') })
 gulp.task('cache:clear', () => { return cache.clearAll() })
 
 gulp.task('default', () => {
-  runSequence('clean:dist', 'clean:devices',
+  runSequence('clean:dist',
   ['sass','html', 'useref', 'watch'], () => {
     console.log('finishing tasks')
   })
