@@ -8,7 +8,7 @@ This project depends on node.js. To install run:
 3. $ sudo npm install npm -g
 ```
 
-#### What you get out of the box:
+###### What you get out of the box:
 
 ```
 - Angular
@@ -21,7 +21,7 @@ This project depends on node.js. To install run:
   - BrowserSync
 ```
 
-### Up and Running: 
+### Installation: 
 
 ```
 1. $ git clone git@github.com:alexUXUI/Launch-Pad.git
@@ -29,20 +29,52 @@ This project depends on node.js. To install run:
 3. $ npm i -S
 ```
 
-#### Build the app:
+### Up and running:
+
+Once all the pendencies are met, the app is ready to be built by our gulpfile.js. To execute the gulp tasks, run the folloing command:
 
 ```
 $ gulp
 ```
 
-This will run the gulpfile.js, which will execute the following tasks:
+### Build Tooling:
+
+Executing the gulpfile.js with the command above will execute the following tasks:
 
 ```
-1. Minify CSS
+1. Compile SASS
 2. Uglify Javascript
-3. Compile SASS
+3. Minify CSS
 4. Automatically update changes in browser
 5. Pipe all code to distribution folder
+```
+
+##### Gulp Watch taks:
+
+Gulp will automatically sync any changes you make to the SASS files or the index.html file, to the browser. This way, as you're editing markup and styles, you never have to refresh the page.
+
+If you would like to incorporate js into the gulp watch funciton so that you won't have to refresh the page while editing js, make the following changes:
+
+Add this gulp task:
+
+```js
+gulp.task('js', () => {
+  return gulp.src('/app/client/js/*.js')
+  .pipe(uglify())
+  .pipe(gulp.dest('dist/js'))
+  .pipe(browserSync.reload({
+    stream: true
+  }))
+})
+```
+
+Add the task to thw watch function:
+
+```js
+gulp.task('watch', ['html', "sass",'js', "sync"], () => {
+  gulp.watch('app/client/scss/*.scss', ["sass"])
+  gulp.watch('app/client/index.html', ["html"])
+})
 ```
 
 ### Testing: 
@@ -51,8 +83,9 @@ This framework was built for E2E testing with a focus on UI.
 
 ##### Running Tests:
 
-To run just the tests, run the following command:
+To run just the tests, run the following commands:
 ```
+$ gulp (gulp MUST be running in order to test successfully)
 $ gulp test
 ```
 
