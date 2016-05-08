@@ -16,7 +16,7 @@ module.exports = {
 			.resizeWindow(700, 800)
 			.assert.cssProperty("body", "background-color", "rgba(144, 238, 144, 1)")
 			.assert.containsText('.greeting', 'Awesome Sauce')
-			.saveScreenshot('./selenium-suite/reports/devices/desktop.png')
+			.saveScreenshot('./E2E/reports/devices/desktop.png')
 	},
 	'@tags': ['mobile'],
 	'Mobile Testing': function(browser) {
@@ -25,7 +25,7 @@ module.exports = {
 			.waitForElementVisible('body', 3000, 'page loaded')
 			.waitForElementPresent('.greeting', 3000)
 			.resizeWindow(300, 800)
-			.saveScreenshot('./selenium-suite/reports/devices/tablet.png')
+			.saveScreenshot('./E2E/reports/devices/tablet.png')
 			.closeWindow()
 			.end();
 	}

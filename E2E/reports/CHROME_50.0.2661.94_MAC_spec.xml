@@ -5,9 +5,9 @@
 
   <testsuite name="spec"
     errors="0" failures="0" hostname="" id="" package="spec" skipped="0"
-    tests="3" time="3.537" timestamp="Sun, 08 May 2016 18:59:30 GMT">
+    tests="3" time="3.474" timestamp="Sun, 08 May 2016 19:15:49 GMT">
   
-    <testcase name="Desktop testing" time="2.177" assertions="3">
+    <testcase name="Desktop testing" time="2.074" assertions="3">
 
     
 
@@ -16,14 +16,14 @@
     
     </testcase>
   
-    <testcase name="Tablet testing" time="0.4540" assertions="2">
+    <testcase name="Tablet testing" time="0.5030" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="Mobile Testing" time="0.9060" assertions="2">
+    <testcase name="Mobile Testing" time="0.8970" assertions="2">
 
     
 

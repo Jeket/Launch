@@ -55,14 +55,14 @@ gulp.task('sass', () => {
   }))
 })
 
-gulp.task('js', () => {
-  return gulp.src('/app/client/js/*.js')
-  .pipe(uglify())
-  .pipe(gulp.dest('dist/js'))
-  .pipe(browserSync.reload({
-    stream: true
-  }))
-})
+// gulp.task('js', () => {
+//   return gulp.src('/app/client/js/*.js')
+//   .pipe(uglify())
+//   .pipe(gulp.dest('dist/js'))
+//   .pipe(browserSync.reload({
+//     stream: true
+//   }))
+// })
 
 gulp.task('imagemin', () => {
   return gulp.src('app/client/images/**/*.+(png|jpg|gif|svg)')
@@ -72,7 +72,7 @@ gulp.task('imagemin', () => {
   .pipe(gulp.dist('dist/images'))
 })
 
-gulp.task('watch', ['html', "sass",'js', "sync"], () => {
+gulp.task('watch', ['html', "sass", "sync"], () => {
   gulp.watch('app/client/scss/*.scss', ["sass"])
   gulp.watch('app/client/index.html', ["html"])
 })

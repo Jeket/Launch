@@ -10,7 +10,7 @@
   "selenium" : {
     "start_process" : true,
     "server_path" : "./node_modules/selenium-server/lib/runner/selenium-server-standalone-2.47.1.jar",
-    "log_path" : "selenium-suite/reports",
+    "log_path" : "E2E/reports",
     "host" : "127.0.0.1",
     "port" : 4444,
 
