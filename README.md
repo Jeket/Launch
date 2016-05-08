@@ -1,10 +1,10 @@
 # Launch-Pad
 *The ulitmate boilerplate for front-end behavior driven development*
 
-___
-
 This project depends on node.js. To install run:
 ```shell
+$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+$ brew install node
 $ sudo npm install npm -g
 ```
 
@@ -12,11 +12,13 @@ $ sudo npm install npm -g
 
 ```
 - Angular
-- Selenium (Nightwatch.js)
+  - UI Router
+- Selenium 
+  - Nightwatch.js
 - Gulp
-- SASS 
-- Babel 
-- BrowserSync
+  - SASS 
+  - Babel 
+  - BrowserSync
 ```
 
 ### Up and Running: 
