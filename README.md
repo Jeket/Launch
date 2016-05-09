@@ -68,13 +68,13 @@ Here are some useful sample methods to get you started with Nightwatch.
 
 ```js
 The .resizeWindow() method takes a height and a width px value.
-The .cssPorperty() method takes an element, using css selector syntax, as well as a porperty and a value.
+The .cssProperty() method takes an element, using css selector syntax, as well as a porperty and a value.
 The .saveScreenshot() method takes a path to save the image.
 ```
 
 ##### Writing tests:
 
-The testing suite is made up of three tests. After the tests have run, selenium and nightwatch.js write a test reprt to the **reports** folder. A screen shot of each browser (device) size are written into the **devices** folder. You can edit the: nightwatch.json, gulfile.js, or package.json files to change the test configs. 
+The testing suite is made up of three tests. After the tests have run, selenium and nightwatch.js write a test report to the **reports** folder. A screen shot of each browser (device) size are written into the **devices** folder. You can edit the: nightwatch.json, gulfile.js, or package.json files to change the test configs. 
 
 ### Build Tooling:
 
