@@ -2,6 +2,7 @@
 **The ulitmate boilerplate for front-end TDD**
 
 This project depends on node.js. To install run:
+
 ```shell
 1. $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 2. $ brew install node
@@ -49,20 +50,21 @@ $ gulp test
 
 ##### Customizing tests:
 
-The test suite relies on Nightwatch.js to communicate with Selenium. Although selenium .js statements are valid within nightwatch, in order to fully customize the UI testing portion, you will need to become familiar with the UI testing endpoints available thhrough the nightwatch.js API. In the meantime, here are some useful sample methods to get you started with Nightwatch.
+The test suite relies on Nightwatch.js to communicate with Selenium. Here is a sample test. 
 
 ```js
 '@tags': ['desktop'],
 'Desktop testing': function(browser){
 	browser
-		.url('http://localhost:3000')
-		.resizeWindow(1000, 800)
-		.assert.cssProperty('body', 'background-color', 'rgba(100, 149, 237, 1)')
-		.waitForElementVisible('body', 3000, 'page loaded')
-		.waitForElementPresent('.greeting', 3000)
-	  	.saveScreenshot('./selenium-suite/reports/devices/desktop.png')
+		.url('http://localhost:3000') // point this at any website
+		.waitForElementVisible('body', 3000, 'page loaded') // wait until the body has loaded
+		.resizeWindow(1000, 800) // resize the browser
+		.assert.cssProperty('body', 'background-color', 'rgba(100, 149, 237, 1)') // check to see if the body has a color 
+	  	.saveScreenshot('./selenium-suite/reports/devices/desktop.png') // take a picture
 },
 ```
+
+Here are some useful sample methods to get you started with Nightwatch.
 
 ```js
 The .resizeWindow() method takes a height and a width px value.
@@ -72,7 +74,7 @@ The .saveScreenshot() method takes a path to save the image.
 
 ##### Writing tests:
 
-The testing suite is made up of three tests. Each test resizes the browser window and checks for UI conditions. After the tests have run, selenium and nightwatch.js write a test reprt to the **reports** folder. A screen shot of each browser (device) size are written into the **devices** folder, located within reports. To change the configuration of the tests you can edit the: nightwatch.json, gulfile.js, or package.json files.
+The testing suite is made up of three tests. After the tests have run, selenium and nightwatch.js write a test reprt to the **reports** folder. A screen shot of each browser (device) size are written into the **devices** folder. You can edit the: nightwatch.json, gulfile.js, or package.json files to change the test configs. 
 
 ### Build Tooling:
 
@@ -88,9 +90,7 @@ Executing the gulpfile.js with the command above will execute the following task
 
 ##### Gulp Watch taks:
 
-Gulp will automatically sync any changes you make to the SASS files or the index.html file, to the browser. This way, as you're editing markup and styles, you never have to refresh the page.
-
-If you would like to incorporate js into the gulp watch funciton so that you won't have to refresh the page while editing js, make the following changes:
+Gulp will automatically sync any changes you make to the SASS files or the index.html file, to the browser. Make the following changes if you would like to incorporate js into the gulp watch funciton:
 
 Add this gulp task:
 
