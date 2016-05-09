@@ -1,5 +1,5 @@
 # Launch
-**The ulitmate boilerplate for front-end TDD**
+**Boilerplate for front-end TDD**
 
 This project depends on node.js. To install run:
 
