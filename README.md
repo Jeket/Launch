@@ -1,5 +1,5 @@
 # Launch
-*The ulitmate boilerplate for front-end TDD*
+**The ulitmate boilerplate for front-end TDD**
 
 This project depends on node.js. To install run:
 ```shell
@@ -11,18 +11,11 @@ This project depends on node.js. To install run:
 ###### What you get out of the box:
 
 ```
-- Angular -v 1.49
-  - UI Router
+- Angular.js -v 1.49
 - Selenium 
-  - Nightwatch.js
-- Gulp
-  - SASS 
-  - Babel 
-  - BrowserSync
+- Nightwatch.js
+- Gulp.js
 - Green Sock Animation Platform
-  - TweenMax
-  - TweenLite
-  - All GSAP pulgins
 ```
 
 ### Installation: 
@@ -35,11 +28,51 @@ This project depends on node.js. To install run:
 
 ### Up and running:
 
-Once all the dependencies are met, the app is ready to be built by our gulpfile.js. To execute the gulp tasks, run the folloing command:
+To start the app and execute the gulp tasks, run the folloing command in the directory where your gulpfile.js is located:
 
 ```
 $ gulp
 ```
+
+### Testing: 
+
+This framework was built for E2E testing with a focus on UI. 
+
+##### Running Tests:
+
+To run just the tests make sure to follow the steps listed below in order.
+```
+$ gulp 
+// open up a new terminal tab
+$ gulp test
+```
+
+##### Customizing tests:
+
+The test suite relies on Nightwatch.js to communicate with Selenium. Although selenium .js statements are valid within nightwatch, in order to fully customize the UI testing portion, you will need to become familiar with the UI testing endpoints available thhrough the nightwatch.js API. In the meantime, here are some useful sample methods to get you started with Nightwatch.
+
+```js
+'@tags': ['desktop'],
+'Desktop testing': function(browser){
+	browser
+		.url('http://localhost:3000')
+		.resizeWindow(1000, 800)
+		.assert.cssProperty('body', 'background-color', 'rgba(100, 149, 237, 1)')
+		.waitForElementVisible('body', 3000, 'page loaded')
+		.waitForElementPresent('.greeting', 3000)
+	  	.saveScreenshot('./selenium-suite/reports/devices/desktop.png')
+},
+```
+
+```js
+The .resizeWindow() method takes a height and a width px value.
+The .cssPorperty() method takes an element, using css selector syntax, as well as a porperty and a value.
+The .saveScreenshot() method takes a path to save the image.
+```
+
+##### Writing tests:
+
+The testing suite is made up of three tests. Each test resizes the browser window and checks for UI conditions. After the tests have run, selenium and nightwatch.js write a test reprt to the **reports** folder. A screen shot of each browser (device) size are written into the **devices** folder, located within reports. To change the configuration of the tests you can edit the: nightwatch.json, gulfile.js, or package.json files.
 
 ### Build Tooling:
 
@@ -80,45 +113,6 @@ gulp.task('watch', ['html', "sass",'js', "sync"], () => {
   gulp.watch('app/client/index.html', ["html"])
 })
 ```
-
-### Testing: 
-
-This framework was built for E2E testing with a focus on UI. 
-
-##### Running Tests:
-
-To run just the tests, run the following commands:
-```
-$ gulp (gulp MUST be running in order to test successfully)
-$ gulp test
-```
-
-##### Customizing tests:
-
-The test suite relies on Nightwatch.js to communicate with Selenium. Although selenium .js statements are valid within nightwatch, in order to fully customize the UI testing portion, you will need to become familiar with the UI testing endpoints available thhrough the nightwatch.js API. In the meantime, here are some useful sample methods to get you started with Nightwatch.
-
-```js
-'@tags': ['desktop'],
-'Desktop testing': function(browser){
-	browser
-		.url('http://localhost:3000')
-		.resizeWindow(1000, 800)
-		.assert.cssProperty('body', 'background-color', 'rgba(100, 149, 237, 1)')
-		.waitForElementVisible('body', 3000, 'page loaded')
-		.waitForElementPresent('.greeting', 3000)
-	  	.saveScreenshot('./selenium-suite/reports/devices/desktop.png')
-},
-```
-
-```js
-The .resizeWindow() method takes a height and a width px value.
-The .cssPorperty() method takes an element, using css selector syntax, as well as a porperty and a value.
-The .saveScreenshot() method takes a path to save the image.
-```
-
-##### Writing tests:
-
-The testing suite is made up of three tests. Each test resizes the browser window and checks for UI conditions. After the tests have run, selenium and nightwatch.js write a test reprt to the **reports** folder. A screen shot of each browser (device) size are written into the **devices** folder, located within reports. To change the configuration of the tests you can edit the: nightwatch.json, gulfile.js, or package.json files.
 
 ### Client Side MVC:
 
